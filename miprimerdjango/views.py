@@ -1,4 +1,4 @@
-import datetime
+from datetime import datetime
 from django.http import HttpResponse
 from django.template import Template, Context, loader
 from inicio.models import Perro
@@ -89,7 +89,7 @@ def inicio(request):
     
     # renderizar_template = template.render(diccionario)
     # return HttpResponse(renderizar_template)
-    return render
+    return render(request, 'inicio.html', diccionario)
 
 def segunda_vista(request):
         return HttpResponse('<h1>Soy la segunda vista!</h1>')
